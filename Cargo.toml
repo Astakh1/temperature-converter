@@ -8,7 +8,7 @@ name = "PE-Task6-Rust"
 path = "src/main.rs"
 
 [lib]
-name = "PE-Task6-Rust"
+name = "PE_Task6_Rust"
 path = "src/lib.rs"
 
 [dependencies]
