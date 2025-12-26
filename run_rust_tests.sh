@@ -2,11 +2,10 @@
 
 echo "##teamcity[testSuiteStarted name='Rust Tests']"
 
-# Запускаем тесты и фильтруем только строки с результатами
-cargo test --release --test integration_tests -- --format=terse 2>&1 | grep -E '^test .* \.\.\. (ok|FAILED)$' | while read line
+cargo test --release --test integration_tests -- --nocapture 2>&1 | grep -E '^test .* \.\.\. (ok|FAILED)$' | while read line
 do
-    test_name=$(echo "$line" | cut -d' ' -f2)
-    status=$(echo "$line" | cut -d' ' -f3)
+    test_name=$(echo "$line" | awk '{print $2}')
+    status=$(echo "$line" | awk '{print $3}')
     
     echo "##teamcity[testStarted name='$test_name']"
     
