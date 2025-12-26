@@ -1,4 +1,4 @@
-use temperature_converter::convert_temperature;
+use PE_Task6_Rust::convert_temperature;
 use assert_approx_eq::assert_approx_eq;
 
 #[test]
