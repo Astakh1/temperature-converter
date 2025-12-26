@@ -1,14 +1,14 @@
 [package]
-name = "temperature-converter"
+name = "PE-Task6-Rust"
 version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-name = "temperature-converter"
+name = "PE-Task6-Rust"
 path = "src/main.rs"
 
 [lib]
-name = "temperature_converter"
+name = "PE-Task6-Rust"
 path = "src/lib.rs"
 
 [dependencies]
